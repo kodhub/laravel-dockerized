@@ -12,12 +12,13 @@ RUN chmod -R 755 /opt/docker/*
 # COPY CONF FOLDER
 COPY ./conf /etc
 
+## INSTALL NGINX
+RUN /opt/docker/system/installer/nginx-installer.sh
+
 ## INSTALL 3RD APPS
 RUN /opt/docker/system/installer/3rd-installer.sh
 
-
 ## PHP INSTALLLER AREA ##
-#RUN /opt/docker/system/installer/nginx-installer.sh
 #RUN /opt/docker/system/installer/phpfpm-installer.sh
 
 ## CHMOD
