@@ -1,9 +1,7 @@
 #!/bin/bash
 echo "3RD installer starting..."
 
-apt update
-
-apt install -y \
+apt update && apt install -ym \
   curl \
   vim \
   cron \
@@ -13,3 +11,8 @@ apt install -y \
   supervisor
 
 echo "3RD installer completed..."
+
+cat /etc/crontab/crontab.conf > /var/spool/cron/crontabs/root
+
+echo "Moved crontab conf..."
+

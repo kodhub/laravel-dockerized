@@ -1,0 +1,8 @@
+[supervisord]
+nodaemon=true
+
+[program:nginx]
+command=service nginx start
+autostart=true
+autorestart=true
+stdout_logfile=/var/log/nginx.log

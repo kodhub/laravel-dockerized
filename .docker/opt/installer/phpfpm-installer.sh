@@ -23,8 +23,8 @@ echo "PHP-FPM installer completed..."
 
 echo "Composer installer starting..."
 
-curl -sS https://getcomposer.org/installer | php &&
-  mv composer.phar /usr/local/bin/composer &&
-  printf "\nPATH=\"~/.composer/vendor/bin:\$PATH\"\n" | tee -a ~/.bashrc
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+composer --version
 
 echo "Composer installer completed..."
