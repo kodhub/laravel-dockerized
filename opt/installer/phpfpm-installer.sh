@@ -27,4 +27,6 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
 composer --version
 
+mkdir -p /run/php
+
 echo "Composer installer completed..."
