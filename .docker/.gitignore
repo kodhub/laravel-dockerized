@@ -1,0 +1,4 @@
+.idea
+./storage
+!./storage/.gitignore
+htdocs

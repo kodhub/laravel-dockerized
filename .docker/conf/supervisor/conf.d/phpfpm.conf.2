@@ -1,0 +1,8 @@
+[supervisord]
+nodaemon=true
+
+[program:php7.2-fpm]
+command=service php7.2-fpm start
+autostart=true
+autorestart=true
+stdout_logfile=/var/log/php-fpm.log

@@ -1,29 +1,31 @@
-FROM ubuntu:latest
-
+FROM ubuntu:18.10
 USER root
 
-# UPDATE
+## UPDATE OS ##
 RUN apt update
 
-# INSTALL
-RUN apt install nginx -y
-RUN apt install supervisor -y
-RUN apt install vim curl -y
-RUN apt install cron -y
+# COPY OPT FOLDER
+RUN mkdir -p /opt/docker/system
+COPY ./opt /opt/docker/system
+RUN chmod -R 755 /opt/docker/*
 
-COPY ./conf/supervisor/ /etc/supervisor
+# COPY CONF FOLDER
+COPY ./conf /etc
 
-COPY ./conf/crontab/crontab.conf  /tmp/crontab.conf
+## INSTALL NGINX
+RUN /opt/docker/system/installer/nginx-installer.sh
 
-RUN cat /tmp/crontab.conf > /var/spool/cron/crontabs/root
+## INSTALL 3RD APPS
+RUN /opt/docker/system/installer/3rd-installer.sh
 
-# COPY SCRIPT
-RUN mkdir -p /opt/bash
-ADD ./opt/start.sh /opt/start.sh
-RUN chmod 755 /opt/start.sh
+## PHP INSTALLLER AREA ##
+#RUN /opt/docker/system/installer/phpfpm-installer.sh
 
-# INIT SCRIPT
-ENTRYPOINT ["/bin/sh", "/opt/start.sh"]
+## CHMOD
+RUN usermod -u 1000 www-data
 
-# EXPOSE
-EXPOSE 80 443
+## RUN SUPERVISORD
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+
+## SET WORKDIR PATH
+WORKDIR /var/www
