@@ -21,6 +21,12 @@ RUN /opt/docker/system/installer/3rd-installer.sh
 ## PHP INSTALLLER AREA ##
 RUN /opt/docker/system/installer/phpfpm-installer.sh
 
+## MYSQL INSTALLER ##
+RUN /opt/docker/system/installer/mysql-installer.sh
+
+## REDIS INSTALLER ##
+RUN /opt/docker/system/installer/redis-installer.sh
+
 ## CHMOD
 RUN usermod -u 1000 www-data
 
