@@ -12,7 +12,7 @@ apt update && apt install -ym \
 
 echo "3RD installer completed..."
 
-cat /etc/crontab/crontab.conf > /var/spool/cron/crontabs/root
+cat /etc/crontab/crontab.conf > /etc/cron.d/crontab
 
 echo "Moved crontab conf..."
 

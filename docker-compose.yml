@@ -6,4 +6,4 @@ services:
     - "${NGINX_PORT}:80"
     - "${SUPERVISOR_PORT}:9001"
     volumes:
-    - ../htdocs:/var/www/htdocs
+    - ../:/var/www
