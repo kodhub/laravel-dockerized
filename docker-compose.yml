@@ -4,6 +4,7 @@ services:
     build: .
     ports:
     - "${NGINX_PORT}:80"
+    - "${MYSQL_PORT}:3306"
     - "${SUPERVISOR_PORT}:9001"
     volumes:
     - ../:/var/www
