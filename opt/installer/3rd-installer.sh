@@ -19,5 +19,6 @@ do
   printf '%s\n' "$p"
     (crontab -l && echo "$p") | crontab -
 done < /etc/cron.d/crontab.tpl
+
 echo "Moved crontab conf..."
 
