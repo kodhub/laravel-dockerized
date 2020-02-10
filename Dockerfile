@@ -19,7 +19,7 @@ RUN /opt/docker/system/installer/nginx-installer.sh
 RUN /opt/docker/system/installer/3rd-installer.sh
 
 ## PHP INSTALLLER AREA ##
-#RUN /opt/docker/system/installer/phpfpm-installer.sh
+RUN /opt/docker/system/installer/phpfpm-installer.sh
 
 ## CHMOD
 RUN usermod -u 1000 www-data
