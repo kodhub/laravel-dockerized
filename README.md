@@ -1,8 +1,9 @@
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/kodhub/laravel-dockerized?include_prereleases&style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues-raw/kodhub/laravel-dockerized?style=for-the-badge)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kodhub/laravel-dockerized?color=009fe1&style=for-the-badge)
-![GitHub All Releases](https://img.shields.io/github/downloads/kodhub/laravel-dockerized/total?style=for-the-badge)
 # Laravel Dockerized
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/kodhub/laravel-dockerized?include_prereleases)
+![GitHub issues](https://img.shields.io/github/issues-raw/kodhub/laravel-dockerized)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kodhub/laravel-dockerized?color=009fe1)
+![GitHub All Releases](https://img.shields.io/github/downloads/kodhub/laravel-dockerized/total?)
+
 Laravel easy docker environment. 
 
 ### Support
@@ -21,7 +22,7 @@ Write the following code to the directory where your project folder is located o
 
 2- `docker-compose up -d --build`
 
-3- `docker exec -it docker_laravel_1 bash`
+3- `docker exec -it <container-id> bash`
 
 4- Your project install steps
 
