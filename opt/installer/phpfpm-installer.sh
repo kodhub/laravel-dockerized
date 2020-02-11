@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "PHP-FPM installer starting..."
 
 export DEBIAN_FRONTEND=noninteractive
