@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "Mysql installer starting..."
 
 # Install mysql
@@ -17,6 +18,6 @@ echo "Mysql installer starting..."
 service mysql start
 
 mysql -e "CREATE DATABASE laravel /*\!40100 DEFAULT CHARACTER SET utf8 */;"
-mysql -e "CREATE USER root@% IDENTIFIED BY '';"
+mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY '';"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '';"
 mysql -e "FLUSH PRIVILEGES;"

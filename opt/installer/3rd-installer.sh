@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo "3RD installer starting..."
 
 apt update && apt install -ym \
@@ -14,7 +14,7 @@ echo "3RD installer completed..."
 
 cat /etc/crontab/crontab.conf > /etc/cron.d/crontab.tpl
 
-while IFS="" read -r p || [ -n "$p" ]
+while IFS="" read -r p || [[ -n "$p" ]]
 do
   printf '%s\n' "$p"
     (crontab -l && echo "$p") | crontab -
