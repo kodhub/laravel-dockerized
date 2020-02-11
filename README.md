@@ -5,5 +5,27 @@
 # Laravel Dockerized
 Laravel easy docker environment. 
 
+### Support
+   * nginx 
+   * php-fpm ( v7.2 )
+   * mysql ( v5.7 )
+   * redis
+   * crontab
+   * supervisor
+   
+### Install on Your Laravel Project
+
+Write the following code to the directory where your project folder is located on the terminal.
+
+1- `git clone git@github.com:kodhub/laravel-dockerized.git .docker`
+
+2- `docker-compose up -d --build`
+
+3- `docker exec -it docker_laravel_1 bash`
+
+4- Your project install steps
 
 
+### Documentation 
+
+coming soon..
