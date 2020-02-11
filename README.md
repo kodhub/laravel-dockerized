@@ -29,4 +29,4 @@ Write the following code to the directory where your project folder is located o
 
 ### Documentation 
 
-coming soon..
+[Türkçe dökümana git ->](https://github.com/kodhub/laravel-dockerized/blob/develop/docs/tr_TR/GENERAL.md)
