@@ -8,3 +8,6 @@ services:
     - "${SUPERVISOR_PORT}:9001"
     volumes:
     - ../:/var/www
+    - /root
+    - /var/lib/mysql
+    - /var/log

@@ -35,5 +35,3 @@ ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.con
 
 ## SET WORKDIR PATH
 WORKDIR /var/www
-
-VOLUME ['/var/lib/mysql', '/var/log', '/var/www', '/root']
