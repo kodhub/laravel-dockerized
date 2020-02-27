@@ -4,7 +4,9 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kodhub/laravel-dockerized?color=009fe1)
 ![GitHub All Releases](https://img.shields.io/github/downloads/kodhub/laravel-dockerized/total?)
 
-Laravel easy docker environment. 
+Laravel easy docker environment.
+
+[for Magento2](https://github.com/kodhub/magento2-dockerized) 
 
 ### Support
    * nginx 
