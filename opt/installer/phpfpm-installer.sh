@@ -3,22 +3,30 @@ echo "PHP-FPM installer starting..."
 
 export DEBIAN_FRONTEND=noninteractive
 
+echo "deneme";
+
+apt install software-properties-common -y
+add-apt-repository ppa:ondrej/php
+apt update
+
 apt install -y \
   libcurl4 \
-  php7.2-fpm \
-  php7.2-curl \
-  php7.2-cli \
-  php7.2-mysql \
-  php7.2-gd \
-  php7.2-xsl \
-  php7.2-json \
-  php7.2-intl \
+  php7.4-fpm \
+  php7.4-curl \
+  php7.4-cli \
+  php7.4-mysql \
+  php7.4-gd \
+  php7.4-xsl \
+  php7.4-json \
+  php7.4-intl \
   php-pear \
-  php7.2-dev \
-  php7.2-common \
-  php7.2-mbstring \
-  php7.2-zip \
+  php7.4-dev \
+  php7.4-common \
+  php7.4-mbstring \
+  php7.4-zip \
   php-soap
+
+php -v
 
 echo "PHP-FPM installer completed..."
 

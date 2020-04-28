@@ -35,3 +35,6 @@ ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.con
 
 ## SET WORKDIR PATH
 WORKDIR /var/www
+
+EXPOSE 3306 9000 80 6379
+
