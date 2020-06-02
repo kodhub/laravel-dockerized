@@ -1,13 +1,21 @@
-version: "3"
+version: '3'
 services:
   laravel:
     build: .
     ports:
-    - "${NGINX_PORT}:80"
-    - "${MYSQL_PORT}:3306"
-    - "${SUPERVISOR_PORT}:9001"
+      - '${NGINX_PORT}:80'
+      - '${MYSQL_PORT}:3306'
+      - '${SUPERVISOR_PORT}:9001'
+      - '${REDIS_PORT}:6379'
+      - '${PHPFPM_PORT}:9000'
     volumes:
-    - ../:/var/www
-    - /root
-    - /var/lib/mysql
-    - /var/log
+      - '../:/var/www'
+      - 'laravel_root_volume:/root'
+      - 'laravel_mysql_volume:/var/lib/mysql'
+      - 'laravel_varlog_volume:/var/log'
+    environment:
+      - 'PHP_IDE_CONFIG=${PHP_IDE_CONFIG}'
+volumes:
+  laravel_mysql_volume: null
+  laravel_varlog_volume: null
+  laravel_root_volume: null

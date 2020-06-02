@@ -15,6 +15,10 @@ echo "Mysql installer starting..."
 } | debconf-set-selections &&
     apt-get install -y mysql-server mysql-client && rm -rf /var/lib/apt/lists/*
 
+usermod -d /var/lib/mysql/ mysql
+
+sed -i "s/bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/"  /etc/mysql/mysql.conf.d/mysqld.cnf
+
 service mysql start
 
 mysql -e "CREATE DATABASE laravel /*\!40100 DEFAULT CHARACTER SET utf8 */;"
